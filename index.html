@@ -1,0 +1,65 @@
+<!-- Hola colegas, vamos a entretenerlos un poco, haciendo
+un ejercicio de calcular el imc de una persona. Como 
+contenido extra daremos una funcionalidad con Javascript
+para mostrar el resultado, ante cualquie dudas o comentario
+dejadlo en el chat del canal. -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calcular IMC</title>
+
+        <!-- Ahora pasaremos a darles estilos a la pagina, cualquier aporte
+        sera bienvenido, para ello crearemos un archivo llamado estilos.css 
+        y lo enlazaremos en el head de nuestro index.html -->
+        <link rel="stylesheet" href="./css/estilos.css">
+    </head>
+    <body>
+
+        <!-- Aqui estamos defiendo el titulo como la cabecera de la pagina. -->
+        <header class="header">
+            <div class="contenedor">
+                <h1 class="header__titulo">Calculadora IMC</h1>
+            </div>
+        </header>
+
+        <!-- Aqui estamos definiendo el formulario para que el usuario pueda
+        ingresar los datos necesarios (Peso y Altura) para calcular el imc. -->
+        <section class="form-box">
+            <div class="contenedor">
+                <form class="form-box__group">
+                    <div class="form-box__peso">
+                        <label for="inpPeso">Peso (Kg):</label>
+                        <input type="text" id="inpPeso" required autocomplete="off" placeholder="60">
+                    </div>
+                
+                    <div class="form-box__talla">
+                        <label for="inpTalla">Talla (cm)</label>
+                        <input type="text" id="inpTalla" required autocomplete="off" placeholder="1,70" maxlength="4">
+                    </div>
+                
+                    <button type="button" class="form-box__btnCalcular btn" data-calcular>Calcular</button>
+                    <button type="button" class="form-box__btnLimpiar btn" data-limpiar>Limpiar</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Aqui mostraremos los resultado y el estado en que se encuentra la
+        persona, si esta en sobrepeso, bajo peso, etc. -->
+        <section class="resultado-imc">
+            <div class="contenedor">
+                <h2>Mis resultados</h2>
+                <p class="resultado-imc__texto">Tu IMC es: <span data-imc></span></p>
+                <p class="resultado-imc__estado">Tu estado es: <span data-estado></span></p>
+            </div>
+        </section>
+
+
+
+        <!-- Aqui incluiremos el archivo de JavaScript para realizar el Calculo -->
+        <script src="./js/app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,119 @@
+/* Hola colegas, como ya definimos la estructura del documento html
+ahora pasaremos a darle estilos, y primero probaremos si el archivo 
+quedo enlazado. */
+
+/* body {
+    background: #8b0000;
+    color: #fff;
+} */
+/* Bien ya quedo enlazado y empezemos a jugar */
+
+
+/* RESETAMOS LOS MARGENES DE NUESTRA PAGINA*/
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* AGREGAMOS UNOS MARGENES HACIA LOS LADOS DE NUESTRA PAGINA (IZQUERDA Y DERECHA) */
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ESTILOS PARA LA CABECERA (HEADER) */
+.header__titulo {
+    text-align: center;
+    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color: rgb(78, 76, 76);
+}
+
+/* ESTILOS EL FORMULARIO DE INGRESO (PESO Y TALLA) */
+.form-box__peso, 
+.form-box__talla {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem .0;
+}
+
+.form-box__peso label,
+.form-box__talla label {
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: .3rem;
+    color: rgb(78, 76, 76);
+}
+
+.form-box__peso input,
+.form-box__talla input {
+    padding: .5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-box__peso input:focus,
+.form-box__talla input:focus {
+    outline: none;
+    border: 1px solid #888787f7;
+    transition: .7s all ease;
+}
+
+/* AHORA LE DAREMOS ESTILOS A LOS BOTONES DE CALCULAR Y LIMPIAR */
+.btn {
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    transition: .6s all ease;
+}
+
+.form-box__btnCalcular {
+    background: #3FCB48;
+    color: #fff;
+}
+
+.form-box__btnLimpiar {
+    background: #DA3E3F;
+    color: #fff;
+}
+
+.btn:hover {
+    background: rgb(78, 76, 76);
+}
+
+
+/* AHORA LE DAREMOS ESTILOS A LA SECION DE RESULTADOS */
+.resultado-imc {
+    margin: .5rem 0;
+}
+
+.resultado-imc h2 {
+    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.resultado-imc__texto,
+.resultado-imc__estado {
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    margin: .3rem 0;
+}
+
+.resultado-imc__texto > span {
+    color: #5e4579;
+    font-weight: normal;
+    padding: .2rem .2rem;
+}
+
+.resultado-imc__estado > span {
+    color: #DA3E3F;
+    font-weight: normal;
+    padding: .2rem .2rem;
+}
